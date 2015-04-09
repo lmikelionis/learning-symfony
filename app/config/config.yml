@@ -79,8 +79,8 @@ hwi_oauth:
     resource_owners:
         facebook:
             type:                facebook
-            client_id:           ---------------
-            client_secret:       --------------------------------
+            client_id:           658242424287528
+            client_secret:       58c24107ee65000502a0f65b5252651c
 
     http_client:
         verify_peer: false
