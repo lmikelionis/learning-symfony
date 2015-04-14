@@ -10,7 +10,7 @@ class WeatherService
     protected $provider;
     protected $location;
 
-    public function __construct($provider)
+    public function __construct(WeatherProviderInterface $provider)
     {
         $this->provider = $provider;
     }
@@ -18,7 +18,8 @@ class WeatherService
 
     public function GetWeather(Location $location)
     {
-        $this->location = $location;
+        $this->location = $location->getLocation();
+
         return $this->provider->getWeatherByLocation($this->location);
     }
 }

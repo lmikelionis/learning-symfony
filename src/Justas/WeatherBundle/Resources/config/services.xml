@@ -7,13 +7,20 @@
     <parameters>
         <parameter key="nfq.weather_service_class">Justas\WeatherBundle\Service\WeatherService</parameter>
         <parameter key="nfq.weather_provider_class">Justas\WeatherBundle\Providers\MyWeather2Provider</parameter>
+        <parameter key="nfq.location_service_class">Justas\WeatherBundle\Location\Location</parameter>
     </parameters>
 
     <services>
         <service id="nfq.weather" class="%nfq.weather_service_class%">
             <argument>@nfq.weather_provider</argument>
         </service>
+
         <service id="nfq.weather_provider" class="%nfq.weather_provider_class%"/>
+
+        <service id="nfq.location" class="%nfq.location_service_class%">
+            <argument>Vilnius</argument>
+        </service>
+
     </services>
 
 </container>

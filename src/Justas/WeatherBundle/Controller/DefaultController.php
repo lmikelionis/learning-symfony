@@ -17,8 +17,10 @@ class DefaultController extends Controller
     public function indexAction($location)
     {
         $WeatherService = $this->get('nfq.weather');
+        //$weatherProvider = $this->get('nfq.weather_provider');
+        $weatherLocation = $this->get('nfq.location');
 
-        $weather = $WeatherService->GetWeather($location);
+        $weather = $WeatherService->GetWeather($weatherLocation);
 
         return $weather;
     }
