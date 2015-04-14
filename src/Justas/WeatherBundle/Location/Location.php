@@ -6,15 +6,16 @@ use Justas\WeatherBundle\Controller\DefaultController;
 
 class Location
 {
-    public $location;
+    protected $location;
 
-    public function GetLocationFromLatLon($latitude,$longitude)
+    public function __construct($location)
     {
-        $this->location =
+        $this->location = $location;
     }
-    public function GetLatitude($location)
+
+    public function getLocation()
     {
-        $this->
+        return $this->location;
     }
 
 }
